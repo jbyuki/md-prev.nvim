@@ -3,8 +3,9 @@
 local lines = vim.api.nvim_buf_get_lines(0, 0, -1, true)
 
 @render_markdown+=
-local md = require("markdown")
-encoded = md(table.concat(lines, "\n"))
+local markdown = require("markdown")
+encoded = markdown(table.concat(lines, "\n"))
+
 local before = [[<html>
   <head>
 <meta http-equiv="content-type" content="text/html; charset=windows-1252">

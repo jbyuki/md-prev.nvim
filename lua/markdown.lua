@@ -1,4 +1,4 @@
--- Taken from https://raw.githubusercontent.com/mpeterv/markdown/master/markdown.lua
+#!/usr/bin/env lua
 
 ----------------------------------------------------------------------
 -- Utility functions
@@ -976,7 +976,8 @@ local function markdown(text)
    init_escape_table()
 
    text = cleanup(text)
-   text = protect(text)
+   -- Ref https://github.com/mpeterv/markdown/issues/4
+   text = protect(text):gsub("```[^\n]*(.-)```","<pre>%1</pre>") 
    text, link_database = strip_link_definitions(text)
    text = block_transform(text)
    text = unescape_special_chars(text)

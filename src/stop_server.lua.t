@@ -2,7 +2,7 @@
 @define+=
 function M.stop_server()
   if server then
-    server:shutdown()
+    server:close()
     server = nil
     print("Server is not running anymore.")
   else

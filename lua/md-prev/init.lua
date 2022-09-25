@@ -40,8 +40,8 @@ function M.start_server(port)
   			    if vim.bo.filetype == "markdown" then
   			      local lines = vim.api.nvim_buf_get_lines(0, 0, -1, true)
 
-  			      local markdown = require("markdown")
-  			      encoded = markdown(table.concat(lines, "\n"))
+  			      local md = require("md")
+  			      encoded = md(table.concat(lines, "\n"))
   			    end
   			  	sock:write("HTTP/1.1 200 OK\r\n")
   			  	sock:write("Content-Type: text/html\r\n")
@@ -64,7 +64,7 @@ end
 
 function M.stop_server()
   if server then
-    server:shutdown()
+    server:close()
     server = nil
     print("Server is not running anymore.")
   else

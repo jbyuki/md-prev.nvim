@@ -3,5 +3,5 @@
 local lines = vim.api.nvim_buf_get_lines(0, 0, -1, true)
 
 @render_markdown
-local markdown = require("markdown")
-encoded = markdown(table.concat(lines, "\n"))
+local md = require("md")
+encoded = md(table.concat(lines, "\n"))

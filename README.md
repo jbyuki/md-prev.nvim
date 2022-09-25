@@ -1,6 +1,6 @@
 ## md-prev.nvim
 
-A dependency-free plugin to preview markdown in the browser. It relies on the pure markdown-to-html provided by @mpeterv [here](https://www.github.com/mpeterv/markdown). Also a big thanks to @realprogrammersusevim for giving me the idea in the first place with his plugin [md-to-html.nvim](https://github.com/realprogrammersusevim/md-to-html.nvim).
+A dependency-free plugin to preview markdown in the browser. It relies on the pure markdown-to-html provided by @ bakpakin  [here](https://github.com/bakpakin/luamd). Also a big thanks to @realprogrammersusevim for giving me the idea in the first place with his plugin [md-to-html.nvim](https://github.com/realprogrammersusevim/md-to-html.nvim).
 
 **Important Note**: This an experiment more than anything. It shows what's possible with the Neovim API. It is not planned to develop this much further.
 

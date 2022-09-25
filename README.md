@@ -11,6 +11,5 @@ A dependency-free plugin to preview markdown in the browser. It relies on the pu
 
 ### Current limitations
 
-* Very plain looking HTML
 * Browser needs to be opened manually
 * No way to refresh the page from Neovim. User has to refresh from browser each time to see changes.
